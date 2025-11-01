@@ -111,6 +111,7 @@ const ApplicationStatus = () => {
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 };

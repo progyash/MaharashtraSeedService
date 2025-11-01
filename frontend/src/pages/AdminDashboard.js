@@ -179,7 +179,7 @@ const AdminDashboard = () => {
                 <select
                   value={status}
                   onChange={(e) => setStatus(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 >
                   <option value="pending">Pending</option>
                   <option value="approved">Approved</option>
@@ -195,7 +195,7 @@ const AdminDashboard = () => {
                   value={remarks}
                   onChange={(e) => setRemarks(e.target.value)}
                   rows="3"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 />
               </div>
               <div className="flex space-x-4">
