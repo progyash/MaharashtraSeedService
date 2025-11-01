@@ -12,10 +12,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-primary-700 text-white shadow-lg">
+    <nav className="bg-gradient-to-r from-blue-700 to-blue-800 text-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-xl font-bold">
+          <Link to="/" className="text-xl font-bold hover:text-blue-100 transition">
             🌾 Maharashtra Seed Service
           </Link>
           
@@ -27,27 +27,27 @@ const Navbar = () => {
                 </span>
                 <Link
                   to="/apply"
-                  className="px-3 py-2 rounded hover:bg-primary-600 transition"
+                  className="px-4 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200 font-medium"
                 >
                   Apply
                 </Link>
                 <Link
                   to="/status"
-                  className="px-3 py-2 rounded hover:bg-primary-600 transition"
+                  className="px-4 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200 font-medium"
                 >
                   Status
                 </Link>
                 {user?.role === 'admin' && (
                   <Link
                     to="/admin"
-                    className="px-3 py-2 rounded hover:bg-primary-600 transition"
+                    className="px-4 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200 font-medium"
                   >
                     Admin
                   </Link>
                 )}
                 <button
                   onClick={handleLogout}
-                  className="px-3 py-2 rounded hover:bg-primary-600 transition"
+                  className="px-4 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200 font-medium"
                 >
                   Logout
                 </button>
@@ -56,13 +56,13 @@ const Navbar = () => {
               <>
                 <Link
                   to="/login"
-                  className="px-3 py-2 rounded hover:bg-primary-600 transition"
+                  className="px-4 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200 font-medium"
                 >
                   Login
                 </Link>
                 <Link
                   to="/register"
-                  className="px-3 py-2 rounded hover:bg-primary-600 transition"
+                  className="px-4 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200 font-medium"
                 >
                   Register
                 </Link>

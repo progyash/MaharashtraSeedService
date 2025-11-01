@@ -53,15 +53,18 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl w-full space-y-8 bg-white p-8 rounded-lg shadow-md">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="max-w-2xl w-full space-y-8 bg-white p-8 rounded-lg shadow-lg border border-gray-200">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Register for Seed Distribution
-          </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            Fill in your details to create an account
-          </p>
+          <div className="text-center mb-4">
+            <h1 className="text-4xl mb-2">🌾</h1>
+            <h2 className="text-3xl font-extrabold text-gray-900">
+              Register for Seed Distribution
+            </h2>
+            <p className="mt-2 text-sm text-gray-600">
+              Fill in your details to create an account
+            </p>
+          </div>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           {error && (
@@ -76,7 +79,7 @@ const Register = () => {
                 type="text"
                 name="name"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="mt-1 block w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 value={formData.name}
                 onChange={handleChange}
               />
@@ -87,7 +90,7 @@ const Register = () => {
                 type="email"
                 name="email"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="mt-1 block w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -99,7 +102,7 @@ const Register = () => {
                 name="password"
                 required
                 minLength={6}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="mt-1 block w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 value={formData.password}
                 onChange={handleChange}
               />
@@ -110,7 +113,7 @@ const Register = () => {
                 type="tel"
                 name="phone"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="mt-1 block w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 value={formData.phone}
                 onChange={handleChange}
               />
@@ -123,7 +126,7 @@ const Register = () => {
                 required
                 maxLength={12}
                 minLength={12}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="mt-1 block w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 value={formData.aadharNumber}
                 onChange={handleChange}
               />
@@ -134,7 +137,7 @@ const Register = () => {
                 type="text"
                 name="address.district"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="mt-1 block w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 value={formData.address.district}
                 onChange={handleChange}
               />
@@ -145,7 +148,7 @@ const Register = () => {
                 type="text"
                 name="address.taluka"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="mt-1 block w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 value={formData.address.taluka}
                 onChange={handleChange}
               />
@@ -156,7 +159,7 @@ const Register = () => {
                 type="text"
                 name="address.village"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="mt-1 block w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 value={formData.address.village}
                 onChange={handleChange}
               />
@@ -167,7 +170,7 @@ const Register = () => {
                 type="text"
                 name="address.pincode"
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                className="mt-1 block w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
                 value={formData.address.pincode}
                 onChange={handleChange}
               />
@@ -178,7 +181,7 @@ const Register = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50"
+              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-md text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
             >
               {loading ? 'Registering...' : 'Register'}
             </button>

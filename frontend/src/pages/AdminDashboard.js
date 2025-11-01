@@ -68,8 +68,13 @@ const AdminDashboard = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-7xl">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Admin Dashboard</h1>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl mb-2">👨‍💼</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Dashboard</h1>
+          <p className="text-gray-600">Manage all seed applications</p>
+        </div>
       
       {message.text && (
         <div
@@ -83,7 +88,7 @@ const AdminDashboard = () => {
         </div>
       )}
 
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -163,8 +168,8 @@ const AdminDashboard = () => {
       </div>
 
       {selectedApp && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-60 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-2xl border border-gray-200 p-8 max-w-md w-full mx-4">
             <h2 className="text-2xl font-bold mb-4">Update Application Status</h2>
             <div className="space-y-4">
               <div>
@@ -196,7 +201,7 @@ const AdminDashboard = () => {
               <div className="flex space-x-4">
                 <button
                   onClick={() => handleStatusUpdate(selectedApp._id)}
-                  className="flex-1 py-2 px-4 bg-primary-600 text-white rounded-md hover:bg-primary-700"
+                  className="flex-1 py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 font-semibold shadow-md transition-all duration-200 transform hover:scale-[1.02]"
                 >
                   Update
                 </button>
@@ -205,7 +210,7 @@ const AdminDashboard = () => {
                     setSelectedApp(null);
                     setRemarks('');
                   }}
-                  className="flex-1 py-2 px-4 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400"
+                  className="flex-1 py-3 px-4 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 font-semibold transition-all duration-200"
                 >
                   Cancel
                 </button>

@@ -50,17 +50,23 @@ const ApplicationStatus = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-6xl">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Application Status</h1>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl mb-2">🌾</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Application Status</h1>
+          <p className="text-gray-600">Track all your seed applications</p>
+        </div>
       
       {applications.length === 0 ? (
-        <div className="bg-white rounded-lg shadow-md p-8 text-center">
-          <p className="text-gray-600">You haven't submitted any applications yet.</p>
+        <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-12 text-center">
+          <p className="text-gray-600 text-lg">You haven't submitted any applications yet.</p>
+          <p className="text-gray-400 text-sm mt-2">Apply for seeds to get started!</p>
         </div>
       ) : (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {applications.map((app) => (
-            <div key={app._id} className="bg-white rounded-lg shadow-md p-6">
+            <div key={app._id} className="bg-white rounded-lg shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-lg font-semibold text-gray-900 capitalize">
                   {app.seedType}

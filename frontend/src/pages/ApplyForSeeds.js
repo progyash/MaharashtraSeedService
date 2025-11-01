@@ -39,14 +39,18 @@ const ApplyForSeeds = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-2xl">
-      <div className="bg-white rounded-lg shadow-md p-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          Apply for Seed Distribution
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Welcome, {user?.name}. Fill in the details below to apply for seeds.
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
+      <div className="container mx-auto max-w-2xl">
+        <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-8">
+          <div className="text-center mb-6">
+            <h1 className="text-4xl mb-2">🌾</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              Apply for Seed Distribution
+            </h1>
+            <p className="text-gray-600">
+              Welcome, <span className="font-semibold text-blue-600">{user?.name}</span>. Fill in the details below to apply for seeds.
+            </p>
+          </div>
 
         {message.text && (
           <div
@@ -68,7 +72,7 @@ const ApplyForSeeds = () => {
             <select
               name="seedType"
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
               value={formData.seedType}
               onChange={handleChange}
             >
@@ -92,7 +96,7 @@ const ApplyForSeeds = () => {
               name="quantity"
               required
               min="1"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
               value={formData.quantity}
               onChange={handleChange}
             />
@@ -108,7 +112,7 @@ const ApplyForSeeds = () => {
               required
               min="0.1"
               step="0.1"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
               value={formData.landArea}
               onChange={handleChange}
             />
@@ -121,7 +125,7 @@ const ApplyForSeeds = () => {
             <select
               name="cropSeason"
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
               value={formData.cropSeason}
               onChange={handleChange}
             >
@@ -135,7 +139,7 @@ const ApplyForSeeds = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-2 px-4 bg-primary-600 text-white rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 disabled:opacity-50"
+            className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 font-semibold shadow-md transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
           >
             {loading ? 'Submitting...' : 'Submit Application'}
           </button>
